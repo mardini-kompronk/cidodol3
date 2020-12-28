@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidodol3</title>
+    <!-- font google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Yellowtail&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Slab:wght@500&display=swap"
+        rel="stylesheet">
+
+
+    <!-- my css -->
+    <link rel="stylesheet" href="app.css">
+    <!-- AOS css-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- fonts awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"
+        integrity="sha512-F5QTlBqZlvuBEs9LQPqc1iZv2UMxcVXezbHzomzS6Df4MZMClge/8+gXrKw2fl5ysdk4rWjR0vKS7NNkfymaBQ=="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- navbar -->
+        <div class="navbar">
+            <div class="brand">CIDODOL 3</div>
+            <div>
+                <ul class="navigation">
+                    <li onclick="scrollPage('.jumbotron')">Home</li>
+                    <li onclick="scrollPage('.about')">About us</li>
+                    <li onclick="scrollPage('.contact')">Contact</li>
+                </ul>
+            </div>
+            <button class=" btn-join">JOIN US</button>
+            <div class="menu-icon" onclick="navOpenClose()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <!-- navbar mobile -->
+        <div class="nav-mobile">
+            <ul class="navigation-mobile">
+                <li onclick="scrollPage('.jumbotron')">Home</li>
+                <li onclick="scrollPage('.about')">About us</li>
+                <li onclick="scrollPage('.contact')">Contact</li>
+            </ul>
+            <button class="btn-join-mobile">JOIN US</button>
+        </div>
+        <div class="jumbotron">
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide1">
+                        <h1>Senyum</h1>
+                    </div>
+                    <div class="swiper-slide slide2">
+                        <h1>Semangat</h1>
+                    </div>
+                    <div class="swiper-slide slide3">
+                        <h1>Kompak</h1>
+                    </div>
+                    <div class="swiper-slide slide4">
+                        <h1>Dan kebersamaan</h1>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- about -->
+            <div class="about">
+                <div class="text" data-aos="fade-right" data-aos-delay="500">
+                    <h1>Siapa kami?</h1>
+                    <p>"Kami adalah orang orang yg ceria dan gembira, dan bahagia adalah jalan ninja kami."</p>
+                    <button class="btn-join-about">JOIN US</button>
+                </div>
+                <div class="img-about" data-aos="fade-left" data-aos-delay="1000">
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+            <div class="contact-box" data-aos="zoom-out" data-aos-delay="500">
+                <h3>Temukan kami di</h3>
+                <div class="icon-sosmed">
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+            </div>
+            <div class="member" data-aos="zoom-in" data-aos-delay="1000">
+                <h3>Member</h3>
+                <ul>
+                    <li>Ai Fitriani</li>
+                    <li>Ali Akashi</li>
+                    <li>Puput Idayanti</li>
+                    <li>Maulana Alfarizi</li>
+                    <li>Oktario Sanrizki</li>
+                    <li>Mardini</li>
+                    <li>Ikbal Rudiansyah</li>
+                    <li>Ilham Agustasya</li>
+                    <li>Suci Nurfadilah</li>
+                    <li>Eda Gunawan</li>
+                </ul>
+            </div>
+        </div>
+        <footer class="footer">
+            &copy; CIDODOL3 2020
+        </footer>
+    </div>
+    <div class="loader"></div>
+    <!-- swiper js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            spaceBetween: 30,
+            centeredSlides: true,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+    <!-- AOS js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- my javascript -->
+    <script src="app.js"></script>
+</body>
+
+</html>
