@@ -15,14 +15,4 @@ const scrollPage = (e) => {
     });
 }
 
-// function load screen  
 
-const container = document.querySelector('.container')
-const loader = document.querySelector('.loader')
-const loadScreen = () => {
-    container.style.display = 'block';
-    loader.style.display = 'none';
-    document.querySelector('body').style.display = 'block';
-}
-
-window.addEventListener('load', loadScreen())
